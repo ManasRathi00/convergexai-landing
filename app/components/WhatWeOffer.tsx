@@ -1,7 +1,12 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { MessageCircleIcon, MapIcon, UsersIcon, BarChart3Icon } from "lucide-react"
+import { motion } from "framer-motion";
+import {
+  MessageCircleIcon,
+  MapIcon,
+  UsersIcon,
+  BarChart3Icon,
+} from "lucide-react";
 
 const steps = [
   {
@@ -18,7 +23,8 @@ const steps = [
   },
   {
     title: "Team Assignment",
-    description: "We assign our best-fit senior developers and AI specialists to your project for optimal results.",
+    description:
+      "We assign our best-fit senior developers and AI specialists to your project for optimal results.",
     icon: UsersIcon,
   },
   {
@@ -27,7 +33,7 @@ const steps = [
       "Continuous monitoring, regular updates, and iterative improvements ensure we deliver on time and on budget.",
     icon: BarChart3Icon,
   },
-]
+];
 
 const fadeInUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -40,7 +46,7 @@ const fadeInUpVariant = {
       ease: "easeOut",
     },
   }),
-}
+};
 
 const arrowVariant = {
   hidden: { opacity: 0, pathLength: 0 },
@@ -53,7 +59,7 @@ const arrowVariant = {
       ease: "easeInOut",
     },
   },
-}
+};
 
 export function WhatWeOffer() {
   return (
@@ -85,7 +91,9 @@ export function WhatWeOffer() {
             transition={{ duration: 0.6 }}
             className="inline-block px-4 py-2 rounded-full bg-blue-100 border border-blue-200 mb-6"
           >
-            <span className="text-blue-600 font-medium text-sm">✨ OUR PROCESS</span>
+            <span className="text-blue-600 font-medium text-sm">
+              ✨ OUR PROCESS
+            </span>
           </motion.div>
 
           <motion.h2
@@ -105,8 +113,8 @@ export function WhatWeOffer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            Our proven 4-step process ensures your AI solution is delivered on time, on budget, and exceeds
-            expectations.
+            Our proven 4-step process ensures your AI solution is delivered on
+            time, on budget, and exceeds expectations.
           </motion.p>
         </div>
 
@@ -133,8 +141,12 @@ export function WhatWeOffer() {
                         Step {index + 1}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                    <p className="text-gray-600 text-lg leading-relaxed">{step.description}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
 
@@ -171,7 +183,10 @@ export function WhatWeOffer() {
             <span className="mr-3 text-xl">✅</span>
             <span>
               <span className="font-bold">Our Guarantee:</span> MVP delivered in{" "}
-              <span className="underline underline-offset-2 font-bold">4 weeks</span> or you don't pay.
+              <span className="underline underline-offset-2 font-bold">
+                4 weeks
+              </span>{" "}
+              or you don't pay.
             </span>
           </div>
         </motion.div>
@@ -186,17 +201,17 @@ export function WhatWeOffer() {
         >
           <button
             onClick={() => {
-              const modal = document.getElementById("contact-modal-trigger")
+              const modal = document.getElementById("contact-modal-trigger");
               if (modal) {
-                ;(modal as HTMLButtonElement).click()
+                (modal as HTMLButtonElement).click();
               }
             }}
-            className="btn-primary text-lg px-8 py-4"
+            className="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-7 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg"
           >
             Start Your Journey
           </button>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -5,6 +5,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
   }
 
   body {
@@ -32,4 +40,8 @@
   .card-hover {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
   }
+}
+
+.hljs {
+  color: #1f2937 !important; /* Tailwind's slate-800 (or any dark text color) */
 }

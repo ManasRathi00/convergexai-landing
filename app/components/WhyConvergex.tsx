@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { CheckIcon } from "@heroicons/react/24/solid"
+import { motion } from "framer-motion";
+import { CheckIcon } from "@heroicons/react/24/solid";
+import { useContactModal } from "../hooks/useContactModal";
 
 const benefits = [
   "Elite full-stack developers with AI expertise",
@@ -10,9 +11,11 @@ const benefits = [
   "Rapid prototyping and iterative development",
   "Scalable architecture built for growth",
   "Ongoing support and maintenance",
-]
+];
 
 export function WhyConvergex() {
+  const { openModal } = useContactModal();
+
   return (
     <section className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,8 +30,8 @@ export function WhyConvergex() {
               Why Choose <span className="text-sky-400">Convergex AI?</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              We don't just build software – we craft intelligent solutions that give you a competitive edge in the
-              AI-driven future.
+              We don't just build software – we craft intelligent solutions that
+              give you a competitive edge in the AI-driven future.
             </p>
 
             <div className="space-y-4">
@@ -61,10 +64,26 @@ export function WhyConvergex() {
               <h3 className="text-2xl font-bold mb-6">Our Process</h3>
               <div className="space-y-6">
                 {[
-                  { step: "01", title: "Discovery", desc: "Understanding your needs and goals" },
-                  { step: "02", title: "Design", desc: "Creating the perfect solution architecture" },
-                  { step: "03", title: "Develop", desc: "Building with cutting-edge AI technology" },
-                  { step: "04", title: "Deploy", desc: "Launching and scaling your solution" },
+                  {
+                    step: "01",
+                    title: "Discovery",
+                    desc: "Understanding your needs and goals",
+                  },
+                  {
+                    step: "02",
+                    title: "Design",
+                    desc: "Creating the perfect solution architecture",
+                  },
+                  {
+                    step: "03",
+                    title: "Develop",
+                    desc: "Building with cutting-edge AI technology",
+                  },
+                  {
+                    step: "04",
+                    title: "Deploy",
+                    desc: "Launching and scaling your solution",
+                  },
                 ].map((item, index) => (
                   <motion.div
                     key={item.step}
@@ -87,7 +106,16 @@ export function WhyConvergex() {
             </div>
           </motion.div>
         </div>
+        {/* CTA Button */}
+        {/* <div className="flex justify-center mt-12">
+          <button
+            onClick={openModal}
+            className="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-7 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg"
+          >
+            Start Your Project
+          </button>
+        </div> */}
       </div>
     </section>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const technologies = [
   { name: "Next.js", category: "Frontend", icon: "N" },
@@ -11,7 +11,7 @@ const technologies = [
   { name: "React", category: "Frontend", icon: "R" },
   { name: "Vercel", category: "Deployment", icon: "V" },
   { name: "PostgreSQL", category: "Database", icon: "PG" },
-]
+];
 
 export function TechStack() {
   return (
@@ -25,11 +25,16 @@ export function TechStack() {
           className="text-center mb-16"
         >
           <div className="inline-block px-4 py-2 rounded-full bg-blue-100 border border-blue-200 mb-6">
-            <span className="text-blue-600 font-medium text-sm">POWERED BY</span>
+            <span className="text-blue-600 font-medium text-sm">
+              POWERED BY
+            </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Cutting-Edge Technology</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Cutting-Edge Technology
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We leverage the latest technologies to build robust, scalable solutions that drive real business results
+            We leverage the latest technologies to build robust, scalable
+            solutions that drive real business results
           </p>
         </motion.div>
 
@@ -53,7 +58,7 @@ export function TechStack() {
           </div>
 
           {/* Tech cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
@@ -63,7 +68,8 @@ export function TechStack() {
                 viewport={{ once: true }}
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.1)",
+                  boxShadow:
+                    "0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.1)",
                 }}
                 className="relative bg-white rounded-2xl p-6 shadow-md border border-gray-100 overflow-hidden"
               >
@@ -90,10 +96,12 @@ export function TechStack() {
             viewport={{ once: true }}
             className="mt-12 text-center"
           >
-            <p className="text-gray-600">...and many more cutting-edge tools to build your perfect solution</p>
+            <p className="text-gray-600">
+              ...and many more cutting-edge tools to build your perfect solution
+            </p>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

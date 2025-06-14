@@ -1,21 +1,22 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
-import { useContactModal } from "../hooks/useContactModal"
+import { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useContactModal } from "../hooks/useContactModal";
+import Image from "next/image";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const { openModal } = useContactModal()
+  const [isOpen, setIsOpen] = useState(false);
+  const { openModal } = useContactModal();
 
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
-  ]
+  ];
 
   return (
     <nav className="fixed top-0 w-full z-50">
@@ -24,12 +25,26 @@ export function Navbar() {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-white/80 backdrop-blur-lg shadow-lg rounded-full px-4 py-2"
+          className="bg-white/80 backdrop-blur-lg shadow-lg rounded-full mx-2 px-2 sm:px-4 py-2"
         >
           <div className="flex justify-between items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-bold text-blue-600">
-                Convergex AI
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="flex-shrink-0"
+            >
+              <Link href="/" className="flex items-center gap-2">
+                <Image
+                  src="/logo.svg"
+                  alt="Logo"
+                  className="h-10 w-auto"
+                  height={28}
+                  width={28}
+                  style={{ minWidth: 28, minHeight: 28 }}
+                />
+                {/* <span className="font-bold text-base text-white tracking-tight hidden sm:inline">
+                  Convergex AI
+                </span> */}
               </Link>
             </motion.div>
 
@@ -64,8 +79,15 @@ export function Navbar() {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 hover:text-blue-600 p-2">
-                {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-700 hover:text-blue-600 p-2"
+              >
+                {isOpen ? (
+                  <XMarkIcon className="h-6 w-6" />
+                ) : (
+                  <Bars3Icon className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
@@ -92,8 +114,8 @@ export function Navbar() {
               ))}
               <button
                 onClick={() => {
-                  openModal()
-                  setIsOpen(false)
+                  openModal();
+                  setIsOpen(false);
                 }}
                 className="w-full mt-4 bg-gradient-to-r from-blue-600 to-sky-500 text-white font-semibold py-2 px-6 rounded-full"
               >
@@ -104,5 +126,5 @@ export function Navbar() {
         )}
       </div>
     </nav>
-  )
+  );
 }

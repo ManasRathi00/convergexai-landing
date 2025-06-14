@@ -1,9 +1,9 @@
-import { Hero } from "./components/Hero"
-import { Services } from "./components/Services"
-import { WhyConvergex } from "./components/WhyConvergex"
-import { TechStack } from "./components/TechStack"
-import { Testimonials } from "./components/Testimonials"
-import { WhatWeOffer } from "./components/WhatWeOffer"
+import { Hero } from "./components/Hero";
+import { Services } from "./components/Services";
+import { WhyConvergex } from "./components/WhyConvergex";
+import { TechStack } from "./components/TechStack";
+import { Testimonials } from "./components/Testimonials";
+import { WhatWeOffer } from "./components/WhatWeOffer";
 
 export default function Home() {
   return (
@@ -15,5 +15,5 @@ export default function Home() {
       <TechStack />
       <Testimonials />
     </>
-  )
+  );
 }
