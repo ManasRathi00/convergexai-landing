@@ -6,51 +6,54 @@ import { useContactModal } from "../hooks/useContactModal";
 const caseStudies = [
   {
     id: 1,
-    title: "AI-Powered Customer Onboarding",
-    client: "TechStart Inc.",
-    industry: "SaaS",
-    challenge: "Manual onboarding process taking 2+ hours per customer",
+    title: "AI-Powered Job Search Platform",
+    industry: "Recruitment & HR Tech",
+    challenge:
+      "Traditional job search platforms failed to match candidates with the right roles, leading to 70%+ irrelevant applications and high recruiter churn.",
     solution:
-      "Custom GPT-4 powered onboarding assistant with intelligent form filling and document processing",
+      "Developed a next-generation job search engine using Django and advanced vector search over millions of job postings and candidate profiles. Leveraged semantic search and deep AI-driven matching to understand nuanced skills, experience, and intent.",
     results: [
-      "50% reduction in onboarding time",
-      "90% customer satisfaction increase",
-      "30% reduction in support tickets",
+      "4x increase in relevant job matches",
+      "92% candidate satisfaction rate",
+      "65% reduction in recruiter screening time",
+      "Over 1 million successful placements in 12 months",
     ],
-    image: "/placeholder.svg?height=300&width=400",
-    tags: ["GPT-4", "Automation", "Customer Success"],
+    image: "/case-studies/job_search.svg",
+    tags: ["Django", "Vector Search", "Semantic AI", "Recruitment"],
   },
   {
     id: 2,
-    title: "Automated Sales Reporting System",
-    client: "ScaleUp Co.",
-    industry: "E-commerce",
-    challenge: "Sales team spending 30+ hours monthly on manual reporting",
+    title: "AI-Powered Sales Agent",
+    industry: "Consumer SaaS",
+    challenge:
+      "Manual sales processes limited scalability and conversion rates, with inconsistent follow-ups and low engagement.",
     solution:
-      "Intelligent automation system with real-time data processing and AI-generated insights",
+      "Engineered a fully autonomous AI sales agent from scratch, capable of personalized outreach, real-time objection handling, and dynamic product recommendations. Seamlessly integrated with CRM and messaging platforms for end-to-end automation.",
     results: [
-      "30+ hours saved monthly",
-      "95% accuracy improvement",
-      "Real-time insights delivery",
+      "Launched in under 8 weeks",
+      "Generated $2.5M+ in new sales within 6 months",
+      "Achieved 38% higher conversion rates vs. human agents",
+      "Handled 50,000+ customer interactions autonomously",
     ],
-    image: "/placeholder.svg?height=300&width=400",
-    tags: ["Automation", "Analytics", "Reporting"],
+    image: "/case-studies/sales_agent.svg",
+    tags: ["AI Agent", "Sales Automation", "CRM Integration"],
   },
   {
     id: 3,
-    title: "LLM-Powered Content Platform",
-    client: "InnovateLab",
-    industry: "Marketing",
-    challenge: "Need for scalable content generation and optimization",
+    title: "AI-Powered Customer Support Revolution",
+    industry: "E-commerce",
+    challenge:
+      "Legacy support systems struggled with high ticket volumes, slow response times, and generic answers that frustrated customers.",
     solution:
-      "Multi-model LLM platform with content optimization and A/B testing capabilities",
+      "Deployed a state-of-the-art AI support platform with deep contextual understanding, real-time sentiment analysis, and proactive engagement. The system learns from every interaction, delivering hyper-personalized, empathetic responses at scale.",
     results: [
-      "300% content output increase",
-      "40% engagement improvement",
-      "60% cost reduction",
+      "98% first-contact resolution rate",
+      "80% reduction in average response time",
+      "Customer NPS soared to 75+",
+      "Support costs cut by 55% while boosting loyalty",
     ],
-    image: "/placeholder.svg?height=300&width=400",
-    tags: ["LLM", "Content", "Optimization"],
+    image: "/case-studies/customer_support.svg",
+    tags: ["Customer Support", "Conversational AI", "Sentiment Analysis"],
   },
 ];
 
@@ -111,9 +114,6 @@ export default function CaseStudies() {
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                     {study.title}
                   </h2>
-                  <p className="text-lg text-gray-600 mb-6">
-                    <strong>Client:</strong> {study.client} ({study.industry})
-                  </p>
 
                   <div className="space-y-6">
                     <div>

@@ -119,7 +119,7 @@ export function WhatWeOffer() {
         </div>
 
         {/* Step Cards */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto px-4">
           {steps.map((step, index) => (
             <div key={step.title} className="relative">
               <motion.div
@@ -131,12 +131,12 @@ export function WhatWeOffer() {
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 className="relative z-10 p-6 md:p-8 mb-16 rounded-2xl bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="flex items-start gap-6">
+                <div className="flex flex-col sm:flex-row sm:items-start items-center gap-6 text-center sm:text-left">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
+                    <div className="flex sm:justify-start justify-center items-center gap-3 mb-3">
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
                         Step {index + 1}
                       </span>

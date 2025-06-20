@@ -5,33 +5,34 @@ import { useContactModal } from "../hooks/useContactModal";
 
 const team = [
   {
-    name: "Alex Chen",
-    role: "Founder & Lead AI Engineer",
-    bio: "Former Google AI researcher with 8+ years building scalable AI systems. Passionate about making AI accessible to businesses.",
-    image: "/placeholder.svg?height=300&width=300",
-  },
-  {
-    name: "Sarah Rodriguez",
-    role: "Full-Stack Developer",
-    bio: "Expert in React, Node.js, and cloud architecture. Specializes in building robust, scalable applications.",
-    image: "/placeholder.svg?height=300&width=300",
-  },
-  {
-    name: "Michael Kim",
-    role: "AI/ML Engineer",
-    bio: "PhD in Machine Learning with expertise in LLMs and automation. Focused on practical AI implementations.",
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Manas Rathi",
+    role: "Founder & Full Stack AI Engineer",
+    bio: "Visionary technologist, architecting bespoke AI solutions that empower businesses to transcend the ordinary. Manas blends deep technical mastery with a relentless drive for innovation.",
+    image: "/placeholder-user.jpg",
   },
 ];
 
 const timeline = [
   {
-    year: "2021",
-    event: "Founded Convergex AI with a vision to democratize AI",
+    year: "2022",
+    event:
+      "Convergex AI is founded, driven by a passion to redefine what’s possible with AI.",
   },
-  { year: "2022", event: "Launched first AI automation platform for startups" },
-  { year: "2023", event: "Expanded to serve mid-market companies" },
-  { year: "2024", event: "Reached 50+ successful AI implementations" },
+  {
+    year: "2023",
+    event:
+      "Secured the first wave of visionary clients, delivering transformative, tailor-made AI solutions.",
+  },
+  {
+    year: "2024",
+    event:
+      "Scaled to 20+ clients across diverse industries, each empowered by bespoke automation and intelligent systems.",
+  },
+  {
+    year: "2025",
+    event:
+      "Pioneering the next frontier—elevating businesses with cutting-edge AI, one partnership at a time.",
+  },
 ];
 
 export default function About() {
@@ -56,8 +57,10 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-200 max-w-3xl mx-auto"
           >
-            We're a team of elite full-stack developers on a mission to make AI
-            accessible and practical for every business.
+            Where vision meets code. Convergex AI crafts elegant, end-to-end AI
+            solutions that propel businesses into the future. From our inception
+            to a thriving network of 20+ forward-thinking clients, our journey
+            is a testament to the power of relentless innovation.
           </motion.p>
         </div>
       </section>
@@ -76,22 +79,24 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Convergex AI was born from a simple observation: while AI
-                technology was advancing rapidly, most businesses struggled to
-                implement it effectively. We saw companies spending months
-                trying to integrate AI solutions that didn't fit their specific
-                needs.
+                Convergex AI was founded to bridge the gap between cutting-edge
+                AI and real-world business impact. In a landscape crowded with
+                generic solutions, we envisioned a studio where every line of
+                code is meticulously crafted, every algorithm tailored to the
+                client’s unique ambitions.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Our founders, with backgrounds from Google AI and top tech
-                companies, decided to bridge this gap. We combine deep AI
-                expertise with practical full-stack development skills to build
-                solutions that actually work in the real world.
+                Our journey began with a commitment to curiosity and a
+                relentless pursuit of excellence. As word spread, Convergex AI
+                became the trusted partner for a growing roster of
+                innovators—each project a new canvas, each client a collaborator
+                in redefining what’s possible.
               </p>
               <p className="text-lg text-gray-600">
-                Today, we've helped over 50 companies transform their operations
-                with custom AI solutions, from automating complex workflows to
-                building intelligent SaaS products that scale.
+                Today, with 20+ transformative client partnerships and a
+                portfolio spanning automation, intelligent SaaS, and beyond,
+                Convergex AI stands as a beacon for those who demand more from
+                technology. The story is just beginning.
               </p>
             </motion.div>
             <motion.div
@@ -171,14 +176,14 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Team
+              Meet the Founder
             </h2>
             <p className="text-xl text-gray-600">
-              The experts behind your AI transformation
+              The architect behind your AI transformation
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex justify-center items-center">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -186,12 +191,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-center bg-white rounded-xl shadow-lg p-8 max-w-md w-full"
               >
                 <img
-                  src={member.image || "/placeholder.svg"}
+                  src={member.image || "/placeholder.svg?height=300&width=300"}
                   alt={member.name}
-                  className="w-48 h-48 object-cover rounded-full mx-auto mb-6"
+                  className="w-48 h-48 object-cover rounded-full mx-auto mb-6 border-4 border-sky-200 shadow-md"
                 />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {member.name}

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   generator: "v0.dev",
+  icons: ["logo.svg"],
 };
 
 export default function RootLayout({
